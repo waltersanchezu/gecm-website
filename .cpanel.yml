@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/gecmcons/public_html/
+    - /bin/cp -R /home/gecmcons/gecm-repo/. $DEPLOYPATH
