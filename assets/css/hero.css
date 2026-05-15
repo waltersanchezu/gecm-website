@@ -1,0 +1,181 @@
+/* ==========================================================================
+   GECM Consulting - Hero Section (BEM)
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-primary);
+  overflow: hidden;
+}
+
+.hero__background {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero__bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,43,91,.95) 0%, rgba(0,43,91,.85) 40%, rgba(0,43,91,.7) 100%);
+  z-index: 2;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 3;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: calc(var(--header-height) + var(--space-3xl)) var(--container-padding) var(--space-3xl);
+}
+
+.hero__inner { max-width: 640px; }
+
+.hero__subtitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.hero__subtitle-line {
+  width: 32px;
+  height: 2px;
+  background-color: var(--color-accent);
+}
+
+.hero__subtitle-text {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-widest);
+}
+
+.hero__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-extrabold);
+  color: var(--color-white);
+  line-height: var(--lh-tight);
+  margin-bottom: var(--space-lg);
+}
+
+.hero__description {
+  font-size: var(--fs-sm);
+  color: var(--color-gray-300);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-xl);
+  max-width: 520px;
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-xl);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  transition: all var(--transition-base);
+  white-space: nowrap;
+}
+
+.hero__btn--primary {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: 2px solid var(--color-accent);
+}
+
+.hero__btn--primary:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(192,97,31,.4);
+}
+
+.hero__btn--secondary {
+  background: transparent;
+  color: var(--color-white);
+  border: 2px solid rgba(255,255,255,.4);
+}
+
+.hero__btn--secondary:hover {
+  border-color: var(--color-white);
+  background: rgba(255,255,255,.05);
+  transform: translateY(-2px);
+}
+
+.hero__btn-icon { width: 16px; height: 16px; }
+
+.hero__cards { display: none; }
+
+@media (min-width: 768px) {
+  .hero__title { font-size: var(--fs-4xl); }
+  .hero__description { font-size: var(--fs-base); }
+  .hero__btn { padding: var(--space-md) var(--space-2xl); font-size: var(--fs-base); }
+}
+
+@media (min-width: 1024px) {
+  .hero__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3xl);
+  }
+  .hero__title { font-size: var(--fs-5xl); }
+  .hero__cards {
+    display: block;
+    position: relative;
+    flex-shrink: 0;
+    width: 400px;
+    height: 400px;
+  }
+  .hero__card {
+    position: absolute;
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    color: var(--color-white);
+    min-width: 200px;
+  }
+  .hero__card--tpm {
+    top: 0; right: 0;
+    background: linear-gradient(135deg, rgba(0,61,122,.9), rgba(0,43,91,.8));
+  }
+  .hero__card--methods {
+    bottom: 60px; left: 0;
+    background: linear-gradient(135deg, rgba(192,97,31,.15), rgba(0,43,91,.6));
+  }
+  .hero__card-title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-bold);
+    margin-bottom: var(--space-xs);
+    color: var(--color-white);
+  }
+  .hero__card-text {
+    font-size: var(--fs-xs);
+    color: var(--color-gray-300);
+    line-height: var(--lh-normal);
+  }
+}

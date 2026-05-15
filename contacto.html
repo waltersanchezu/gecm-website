@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacta a GECM Consulting. Agenda una conversación para evaluar oportunidades de mejora en tu negocio.">
+  <title>Contacto | GECM Consulting</title>
+  <link rel="icon" type="image/png" href="assets/images/logo-gecm.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero__overlay"></div>
+    <div class="page-hero__content">
+      <div class="page-hero__breadcrumb">
+        <a href="index.html">Inicio</a>
+        <span class="page-hero__breadcrumb-sep">/</span>
+        <span>Contacto</span>
+      </div>
+      <div class="page-hero__label"><span class="page-hero__label-line"></span> Contacto</div>
+      <h1 class="page-hero__title">Transformemos juntos tu operación</h1>
+      <p class="page-hero__description">Agenda una conversación para evaluar oportunidades de mejora en tu negocio. Estamos listos para ser tu socio estratégico.</p>
+    </div>
+  </section>
+
+  <!-- Formulario de Contacto -->
+  <section class="content-block" id="formulario">
+    <div class="content-block__inner">
+      <div style="display:grid; grid-template-columns:1fr; gap:var(--space-3xl)">
+
+        <!-- Form -->
+        <div>
+          <div class="content-block__header">
+            <div class="content-block__label"><span class="content-block__label-line"></span> Escríbenos</div>
+            <h2 class="content-block__title">Envíanos un mensaje</h2>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <div class="contact-form__group">
+              <label class="contact-form__label" for="contact-name">Nombre completo *</label>
+              <input class="contact-form__input" type="text" id="contact-name" name="name" placeholder="Tu nombre" required>
+            </div>
+            <div class="contact-form__group">
+              <label class="contact-form__label" for="contact-company">Empresa</label>
+              <input class="contact-form__input" type="text" id="contact-company" name="company" placeholder="Nombre de tu empresa">
+            </div>
+            <div class="contact-form__group">
+              <label class="contact-form__label" for="contact-email">Correo electrónico *</label>
+              <input class="contact-form__input" type="email" id="contact-email" name="email" placeholder="tu@email.com" required>
+            </div>
+            <div class="contact-form__group">
+              <label class="contact-form__label" for="contact-phone">Teléfono</label>
+              <input class="contact-form__input" type="tel" id="contact-phone" name="phone" placeholder="+51 9XX XXX XXX">
+            </div>
+            <div class="contact-form__group">
+              <label class="contact-form__label" for="contact-service">Servicio de interés</label>
+              <select class="contact-form__input" id="contact-service" name="service">
+                <option value="">Selecciona un servicio</option>
+                <option value="consultoria">Consultoría y Auditoría</option>
+                <option value="capacitaciones">Capacitaciones</option>
+                <option value="lideres">Desarrollo de Líderes</option>
+                <option value="inhouse">Especialistas Inhouse</option>
+                <option value="auditoria-gratis">Auditoría Gratis</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="contact-form__group">
+              <label class="contact-form__label" for="contact-message">Mensaje *</label>
+              <textarea class="contact-form__textarea" id="contact-message" name="message" placeholder="Cuéntanos sobre tu proyecto o necesidad..." required></textarea>
+            </div>
+            <button type="submit" class="contact-form__submit" id="btn-submit-contact">
+              Enviar Mensaje
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info de contacto -->
+  <section class="content-block content-block--dark" id="info-contacto">
+    <div class="content-block__inner">
+      <div class="content-block__header">
+        <div class="content-block__label"><span class="content-block__label-line"></span> Información</div>
+        <h2 class="content-block__title">Otros canales de contacto</h2>
+      </div>
+      <div class="contact-grid">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/51962543703" target="_blank" class="contact-info-card" style="text-decoration:none">
+          <div class="contact-info-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-card__title">WhatsApp</div>
+            <div class="contact-info-card__text">+51 962 543 703</div>
+          </div>
+        </a>
+        <!-- Teléfono -->
+        <div class="contact-info-card">
+          <div class="contact-info-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-card__title">Teléfono</div>
+            <div class="contact-info-card__text">+51 962 543 703<br>+51 961 818 174</div>
+          </div>
+        </div>
+        <!-- Email -->
+        <div class="contact-info-card">
+          <div class="contact-info-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-card__title">Correo Electrónico</div>
+            <div class="contact-info-card__text">
+              <a href="mailto:gerson.cruzado@gecmconsulting.com">gerson.cruzado@gecmconsulting.com</a><br>
+              <a href="mailto:cristianms.zavaleta@gecmconsulting.com">cristianms.zavaleta@gecmconsulting.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
