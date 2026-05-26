@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="assets/css/sections.css">
   <link rel="stylesheet" href="assets/css/pages.css">
   <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
 </head>
 <body>
 
@@ -70,7 +71,7 @@
   <!-- Services Tabs -->
   <section class="section section--white" id="services-tabs">
     <div class="container">
-      <div class="services-tabs" id="services-tabs-bar">
+      <div class="services-tabs" id="services-tabs-bar" data-anim="fade-up">
         <button class="services-tabs__btn services-tabs__btn--active" data-tab="all">Conoce Nuestros Servicios</button>
         <button class="services-tabs__btn" data-tab="lean">Lean Manufacturing</button>
         <button class="services-tabs__btn" data-tab="sigma">Six Sigma</button>
@@ -83,16 +84,16 @@
   <!-- Propósito -->
   <section class="section section--white purpose" id="about">
     <div class="container">
-      <div class="section__header">
+      <div class="section__header" data-anim="fade-up">
         <span class="section__label"><span class="section__label-line"></span> Propósito</span>
         <h2 class="section__title">Nuestro Propósito</h2>
       </div>
-      <div class="purpose__quote">
+      <div class="purpose__quote" data-anim="scale-in" data-anim-delay="2">
         <div class="purpose__quote-icon">"</div>
         <p class="purpose__quote-text">La mejora continua no es un proyecto, es un sistema que debe integrarse en la organización.</p>
       </div>
-      <p class="purpose__description">GECM se encuentra comprometido en ayudar a las organizaciones a superar obstáculos frente a las oportunidades, amenazas y cambios del entorno. Trabajamos enfocados en lograr y superar los objetivos y crecimiento de manera eficiente, estructurando una organización esbelta a través de la eliminación de tareas que no agregan valor.</p>
-      <div style="text-align:center">
+      <p class="purpose__description" data-anim="fade-up" data-anim-delay="3">GECM se encuentra comprometido en ayudar a las organizaciones a superar obstáculos frente a las oportunidades, amenazas y cambios del entorno. Trabajamos enfocados en lograr y superar los objetivos y crecimiento de manera eficiente, estructurando una organización esbelta a través de la eliminación de tareas que no agregan valor.</p>
+      <div style="text-align:center" data-anim="fade-up" data-anim-delay="4">
         <a href="nosotros.html" class="section__cta-link">Conocer más sobre nosotros <svg class="section__cta-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       </div>
     </div>
@@ -101,13 +102,13 @@
   <!-- Metodología -->
   <section class="section section--light" id="methodology">
     <div class="container">
-      <div class="section__header">
+      <div class="section__header" data-anim="fade-up">
         <span class="section__label"><span class="section__label-line"></span> Metodología</span>
         <h2 class="section__title">Metodología GECM Consulting</h2>
         <p class="section__subtitle">Nuestro enfoque de trabajo estructurado para garantizar resultados sostenibles.</p>
       </div>
       <div class="methodology__grid">
-        <div class="methodology__step">
+        <div class="methodology__step" data-anim="fade-up" data-anim-delay="1">
           <div class="methodology__step-number">1</div>
           <div class="methodology__step-content">
             <svg class="methodology__step-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
@@ -115,7 +116,7 @@
             <p class="methodology__step-text">Identificamos el problema usando diversas técnicas de análisis de causas, recolectando datos y hechos para luego organizarlos y establecer patrones.</p>
           </div>
         </div>
-        <div class="methodology__step">
+        <div class="methodology__step" data-anim="fade-up" data-anim-delay="2">
           <div class="methodology__step-number">2</div>
           <div class="methodology__step-content">
             <svg class="methodology__step-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
@@ -123,7 +124,7 @@
             <p class="methodology__step-text">Definimos soluciones prácticas alineadas al negocio estableciendo un cronograma de tiempo y costo, activando herramientas Toyota.</p>
           </div>
         </div>
-        <div class="methodology__step">
+        <div class="methodology__step" data-anim="fade-up" data-anim-delay="3">
           <div class="methodology__step-number">3</div>
           <div class="methodology__step-content">
             <svg class="methodology__step-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
@@ -131,7 +132,7 @@
             <p class="methodology__step-text">Ejecutamos mejoras en conjunto con el equipo. Aplicamos el modelo 70/20/10 para construir y desarrollar las capacidades del equipo.</p>
           </div>
         </div>
-        <div class="methodology__step">
+        <div class="methodology__step" data-anim="fade-up" data-anim-delay="4">
           <div class="methodology__step-number">4</div>
           <div class="methodology__step-content">
             <svg class="methodology__step-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
@@ -140,10 +141,16 @@
           </div>
         </div>
       </div>
-      <div class="methodology__insight">
+      
+      <!-- Imagen Dinámica -->
+      <div class="methodology__visual-wrap" data-anim="fade-up" data-anim-delay="1" style="margin-top: 3rem; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+        <img src="assets/images/methodology_visual.png" alt="Industrial operations" style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 400px;">
+      </div>
+
+      <div class="methodology__insight" data-anim="scale-in" data-anim-delay="2">
         💡 La mejora continua no es un proyecto, es un sistema que debe integrarse en la organización.
       </div>
-      <div style="text-align:center; margin-top: var(--space-xl)">
+      <div style="text-align:center; margin-top: var(--space-xl)" data-anim="fade-up" data-anim-delay="3">
         <a href="metodologia.html" class="section__cta-link">Ver metodología completa <svg class="section__cta-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       </div>
     </div>
@@ -152,48 +159,48 @@
   <!-- Servicios -->
   <section class="section section--dark" id="services">
     <div class="container">
-      <div class="section__header">
+      <div class="section__header" data-anim="fade-up">
         <span class="section__label"><span class="section__label-line"></span> Servicios</span>
         <h2 class="section__title">Nuestros Servicios</h2>
         <p class="section__subtitle">Soluciones integrales para transformar tu operación y generar valor medible.</p>
       </div>
       <div class="services__grid">
-        <div class="service-card" id="service-consultoria">
+        <div class="service-card" id="service-consultoria" data-anim="fade-up" data-anim-delay="1">
           <div class="service-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
           </div>
           <h3 class="service-card__title">Consultoría y Auditoría</h3>
           <p class="service-card__text">Evaluamos el estado actual de la operación, diseñamos e implementamos mejoras para incrementar eficiencia y reducir costos.</p>
         </div>
-        <div class="service-card" id="service-capacitaciones">
+        <div class="service-card" id="service-capacitaciones" data-anim="fade-up" data-anim-delay="2">
           <div class="service-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 6 3 6 3s3 0 6-3v-5"/></svg>
           </div>
           <h3 class="service-card__title">Capacitaciones</h3>
           <p class="service-card__text">Entrenamientos de metodologías y modelos de gestión a nivel industrial, logístico y tecnológico, integrando teoría y práctica.</p>
         </div>
-        <div class="service-card" id="service-lideres">
+        <div class="service-card" id="service-lideres" data-anim="fade-up" data-anim-delay="3">
           <div class="service-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
           <h3 class="service-card__title">Desarrollo de Líderes</h3>
           <p class="service-card__text">Fortalecemos las capacidades de supervisores y jefaturas en liderazgo en planta, toma de decisiones y gestión de equipos.</p>
         </div>
-        <div class="service-card" id="service-inhouse">
+        <div class="service-card" id="service-inhouse" data-anim="fade-up" data-anim-delay="4">
           <div class="service-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
           </div>
           <h3 class="service-card__title">Especialistas Inhouse</h3>
           <p class="service-card__text">Profesionales con experiencia real que trabajan directamente en tu operación para asegurar resultados medibles.</p>
         </div>
-        <div class="service-card" id="service-mejora">
+        <div class="service-card" id="service-mejora" data-anim="fade-up" data-anim-delay="5">
           <div class="service-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
           </div>
           <h3 class="service-card__title">Gestión de Performance</h3>
           <p class="service-card__text">Definición de KPIs, seguimiento de desempeño, control de desviaciones y mejora continua de resultados.</p>
         </div>
-        <div class="service-card" id="service-continua">
+        <div class="service-card" id="service-continua" data-anim="fade-up" data-anim-delay="6">
           <div class="service-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg>
           </div>
@@ -201,7 +208,7 @@
           <p class="service-card__text">Desarrollo de cultura Kaizen, implementación de indicadores, gestión visual y rutinas operativas basadas en GEMBA.</p>
         </div>
       </div>
-      <div style="text-align:center; margin-top: var(--space-xl)">
+      <div style="text-align:center; margin-top: var(--space-xl)" data-anim="fade-up" data-anim-delay="2">
         <a href="servicios.html" class="section__cta-link">Ver todos los servicios <svg class="section__cta-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       </div>
     </div>
@@ -210,7 +217,7 @@
   <!-- Nosotros / Equipo Consultor -->
   <section class="section section--light" id="team">
     <div class="container">
-      <div class="section__header">
+      <div class="section__header" data-anim="fade-up">
         <span class="section__label"><span class="section__label-line"></span> Nosotros</span>
         <h2 class="section__title">Equipo Consultor</h2>
         <p class="section__subtitle">Profesionales con experiencia real en operación industrial, comprometidos con tu transformación.</p>
@@ -218,7 +225,7 @@
       <div class="team__grid">
 
         <!-- Gerson Cruzado Morales -->
-        <div class="team-card" id="team-gerson">
+        <div class="team-card" id="team-gerson" data-anim="fade-right" data-anim-delay="1">
           <div class="team-card__header">
             <img src="assets/images/gerson-cruzado.jpg" alt="Gerson Cruzado Morales" class="team-card__photo">
           </div>
@@ -239,7 +246,7 @@
         </div>
 
         <!-- Cristiams Zavaleta Caycho -->
-        <div class="team-card" id="team-cristiams">
+        <div class="team-card" id="team-cristiams" data-anim="fade-left" data-anim-delay="2">
           <div class="team-card__header">
             <img src="assets/images/cristiams-zavaleta.jpg" alt="Cristiams Zavaleta Caycho" class="team-card__photo">
           </div>
@@ -266,31 +273,36 @@
   <!-- Diferencial -->
   <section class="section section--white differential" id="differential">
     <div class="container">
-      <div class="section__header">
+      <div class="section__header" data-anim="fade-up">
         <span class="section__label"><span class="section__label-line"></span> Diferencial</span>
         <h2 class="section__title">A diferencia de consultoras tradicionales</h2>
       </div>
       <div class="differential__content">
         <div class="differential__text">
-          <p class="differential__highlight">No trabajamos solo en recomendaciones. Trabajamos en ejecución real y resultados medibles.</p>
+          <p class="differential__highlight" data-anim="fade-right" data-anim-delay="1">No trabajamos solo en recomendaciones. Trabajamos en ejecución real y resultados medibles.</p>
           <div class="differential__list">
-            <div class="differential__item">
+            <div class="differential__item" data-anim="fade-right" data-anim-delay="2">
               <svg class="differential__item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
               <span>Tenemos una amplia red de especialistas quienes brindan su know how y servicios en campo</span>
             </div>
-            <div class="differential__item">
+            <div class="differential__item" data-anim="fade-right" data-anim-delay="3">
               <svg class="differential__item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
               <span>Trabajamos en ejecución real y resultados medibles</span>
             </div>
-            <div class="differential__item">
+            <div class="differential__item" data-anim="fade-right" data-anim-delay="4">
               <svg class="differential__item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
               <span>Buscamos resultados sostenibles a través de mantenimiento y acompañamiento post servicio</span>
             </div>
-            <div class="differential__item">
+            <div class="differential__item" data-anim="fade-right" data-anim-delay="5">
               <svg class="differential__item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
               <span>Conocimiento técnico comprobado con amplia experiencia en operación real y visión de negocio</span>
             </div>
           </div>
+        </div>
+
+        <!-- Imagen Dinámica -->
+        <div class="differential__visual" data-anim="fade-left" data-anim-delay="2" style="flex: 1; min-width: 300px; border-radius: 16px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.15);">
+          <img src="assets/images/team_background.png" alt="Diferencial GECM" style="width: 100%; height: 100%; object-fit: cover; display: block; min-height: 300px;">
         </div>
       </div>
     </div>
@@ -299,8 +311,8 @@
   <!-- Contacto -->
   <section class="section section--dark contact" id="contact">
     <div class="container">
-      <h2 class="contact__title">Transformemos juntos tu operación</h2>
-      <p class="contact__subtitle">Agenda una conversación para evaluar oportunidades de mejora en tu negocio.</p>
+      <h2 class="contact__title" data-anim="fade-up">Transformemos juntos tu operación</h2>
+      <p class="contact__subtitle" data-anim="fade-up" data-anim-delay="2">Agenda una conversación para evaluar oportunidades de mejora en tu negocio.</p>
       <div class="contact__actions">
         <a href="https://wa.me/51962543703" class="contact__btn contact__btn--primary" target="_blank" id="btn-whatsapp">
           <svg class="contact__btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
@@ -328,5 +340,6 @@
   <div id="footer-placeholder"></div>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
 </body>
 </html>
