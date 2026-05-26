@@ -147,8 +147,23 @@ class StackedImagesController {
     if (!containers.length) return;
 
     containers.forEach(container => {
+      const images = Array.from(container.querySelectorAll('.stacked-image'));
+      if (!images.length) return;
+
+      // Initialize classes
+      images.forEach((img, index) => {
+        img.className = `stacked-image stacked-pos-${index}`;
+      });
+
       container.addEventListener('click', () => {
-        container.classList.toggle('is-swapped');
+        // Move the first element to the end of the array
+        const first = images.shift();
+        images.push(first);
+        
+        // Re-apply classes based on new array order
+        images.forEach((img, index) => {
+          img.className = `stacked-image stacked-pos-${index}`;
+        });
       });
     });
   }
