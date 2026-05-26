@@ -103,6 +103,7 @@
   background-color: var(--color-primary);
 }
 
+
 /* ══════════════════════════════════════════════════════════════════
    PURPOSE / PROPÓSITO
    ══════════════════════════════════════════════════════════════════ */
@@ -230,6 +231,28 @@
 /* ══════════════════════════════════════════════════════════════════
    SERVICES
    ══════════════════════════════════════════════════════════════════ */
+#services {
+  position: relative;
+  background-image: url('../images/fondo-1.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#services::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-primary);
+  opacity: 0.85; /* Changed opacity to 0.85 to make image visible */
+  z-index: 1;
+}
+
+#services .container {
+  position: relative;
+  z-index: 2;
+}
+
 .services__grid {
   display: grid;
   grid-template-columns: 1fr;
