@@ -785,3 +785,93 @@
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+/* ── Accordion (Valores) ── */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+.accordion__item {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.accordion__item:hover {
+  border-color: var(--color-accent);
+}
+
+.accordion__item.is-active {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-card);
+}
+
+.accordion__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg);
+  cursor: pointer;
+  user-select: none;
+  background: var(--color-white);
+  transition: background var(--transition-fast);
+}
+
+.accordion__header:hover {
+  background: var(--color-off-white);
+}
+
+.accordion__title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-family: var(--font-heading);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary);
+}
+
+.accordion__icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.accordion__toggle {
+  color: var(--color-gray-400);
+  transition: transform var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion__item.is-active .accordion__toggle {
+  transform: rotate(180deg);
+  color: var(--color-accent);
+}
+
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--color-white);
+}
+
+.accordion__content-inner {
+  padding: 0 var(--space-lg) var(--space-lg);
+  font-size: var(--fs-sm);
+  color: var(--color-gray-600);
+  line-height: var(--lh-relaxed);
+  border-top: 1px solid transparent;
+}
+
+.accordion__item.is-active .accordion__content-inner {
+  border-top-color: var(--color-gray-100);
+  padding-top: var(--space-md);
+}

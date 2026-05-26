@@ -115,7 +115,40 @@ class HeaderController {
   }
 }
 
+class AccordionController {
+  static init() {
+    const accordions = document.querySelectorAll('.accordion__item');
+    if (!accordions.length) return;
+
+    accordions.forEach(item => {
+      const header = item.querySelector('.accordion__header');
+      if (!header) return;
+
+      header.addEventListener('click', () => {
+        const isActive = item.classList.contains('is-active');
+        
+        // Close all other accordions
+        accordions.forEach(acc => {
+          acc.classList.remove('is-active');
+          const content = acc.querySelector('.accordion__content');
+          if (content) content.style.maxHeight = null;
+        });
+
+        // Toggle current
+        if (!isActive) {
+          item.classList.add('is-active');
+          const content = item.querySelector('.accordion__content');
+          if (content) {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        }
+      });
+    });
+  }
+}
+
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   ComponentLoader.loadAll();
+  AccordionController.init();
 });
