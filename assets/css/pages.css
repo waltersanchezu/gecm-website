@@ -10,10 +10,19 @@
   overflow: hidden;
 }
 
+.page-hero__background {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
 .page-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0,43,91,.97) 0%, rgba(0,61,122,.85) 100%);
+  background: linear-gradient(135deg, rgba(0,27,64,.90) 0%, rgba(0,43,91,.75) 100%);
   z-index: 1;
 }
 
