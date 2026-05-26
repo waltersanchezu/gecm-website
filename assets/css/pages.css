@@ -863,6 +863,10 @@
   background: var(--color-white);
 }
 
+.accordion__item.is-active .accordion__content {
+  max-height: 500px;
+}
+
 .accordion__content-inner {
   padding: 0 var(--space-lg) var(--space-lg);
   font-size: var(--fs-sm);

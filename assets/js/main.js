@@ -130,17 +130,11 @@ class AccordionController {
         // Close all other accordions
         accordions.forEach(acc => {
           acc.classList.remove('is-active');
-          const content = acc.querySelector('.accordion__content');
-          if (content) content.style.maxHeight = null;
         });
 
         // Toggle current
         if (!isActive) {
           item.classList.add('is-active');
-          const content = item.querySelector('.accordion__content');
-          if (content) {
-            content.style.maxHeight = content.scrollHeight + "px";
-          }
         }
       });
     });
