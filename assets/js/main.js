@@ -141,8 +141,22 @@ class AccordionController {
   }
 }
 
+class StackedImagesController {
+  static init() {
+    const containers = document.querySelectorAll('.stacked-images');
+    if (!containers.length) return;
+
+    containers.forEach(container => {
+      container.addEventListener('click', () => {
+        container.classList.toggle('is-swapped');
+      });
+    });
+  }
+}
+
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   ComponentLoader.loadAll();
   AccordionController.init();
+  StackedImagesController.init();
 });
