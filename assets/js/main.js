@@ -169,9 +169,39 @@ class StackedImagesController {
   }
 }
 
+class TabsController {
+  static init() {
+    const tabsMenus = document.querySelectorAll('.metod-tabs-menu');
+    if (!tabsMenus.length) return;
+
+    tabsMenus.forEach(menu => {
+      const buttons = menu.querySelectorAll('.metod-tab-btn');
+      
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-target');
+          const targetPanel = document.getElementById(targetId);
+          
+          if (!targetPanel) return;
+          
+          // Remove active class from all buttons and panels in this container
+          const container = btn.closest('.metod-tabs-container');
+          container.querySelectorAll('.metod-tab-btn').forEach(b => b.classList.remove('is-active'));
+          container.querySelectorAll('.metod-tab-panel').forEach(p => p.classList.remove('is-active'));
+          
+          // Add active class to clicked button and target panel
+          btn.classList.add('is-active');
+          targetPanel.classList.add('is-active');
+        });
+      });
+    });
+  }
+}
+
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   ComponentLoader.loadAll();
   AccordionController.init();
   StackedImagesController.init();
+  TabsController.init();
 });
