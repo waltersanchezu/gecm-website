@@ -1178,8 +1178,12 @@
 }
 
 .model-subtitle {
-  font-size: var(--fs-md);
-  color: var(--color-gray-300);
+  font-size: var(--fs-xl);
+  color: var(--color-white);
+  line-height: var(--lh-relaxed);
+  max-width: 700px;
+  font-weight: var(--fw-medium);
+  opacity: 0.9;
 }
 
 .model-body {
