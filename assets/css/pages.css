@@ -1114,6 +1114,16 @@
   padding-bottom: 5px;
 }
 
+.purpose-header {
+  margin-bottom: var(--space-3xl);
+}
+
+@media (max-width: 768px) {
+  .purpose-header {
+    margin-bottom: var(--space-4xl);
+  }
+}
+
 .purpose-subtitle {
   font-family: var(--font-primary);
   font-size: var(--fs-md);
