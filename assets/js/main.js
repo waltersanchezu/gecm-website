@@ -89,29 +89,22 @@ class HeaderController {
   }
 
   static initActiveNav() {
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.header__nav-link[data-nav]');
+    const navLinks = document.querySelectorAll('.header__nav-link');
+    const currentPath = window.location.pathname;
+    let currentPage = currentPath.split('/').pop().split('?')[0].split('#')[0];
 
-    if (!sections.length || !navLinks.length) return;
+    if (currentPage === '' || currentPage === '/') {
+      currentPage = 'index.html';
+    }
 
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const id = entry.target.id;
-            navLinks.forEach(link => {
-              link.classList.toggle(
-                'header__nav-link--active',
-                link.dataset.nav === id
-              );
-            });
-          }
-        });
-      },
-      { threshold: 0.3, rootMargin: '-80px 0px 0px 0px' }
-    );
-
-    sections.forEach(section => observer.observe(section));
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === currentPage) {
+        link.classList.add('header__nav-link--active');
+      } else {
+        link.classList.remove('header__nav-link--active');
+      }
+    });
   }
 }
 
@@ -198,10 +191,76 @@ class TabsController {
   }
 }
 
+class ContactFormController {
+  static init() {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+
+    const questionSpan = document.getElementById('captcha-question');
+    const statusDiv = document.getElementById('contact-status');
+    const submitBtn = document.getElementById('btn-submit-contact');
+    
+    if (!questionSpan || !statusDiv || !submitBtn) return;
+    
+    // Generate Captcha
+    let num1 = Math.floor(Math.random() * 10) + 1;
+    let num2 = Math.floor(Math.random() * 10) + 1;
+    let expectedSum = num1 + num2;
+    questionSpan.textContent = `${num1} + ${num2}`;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      formData.append('captcha_expected', expectedSum.toString());
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Enviando...';
+      statusDiv.style.display = 'none';
+      statusDiv.className = '';
+
+      try {
+        const response = await fetch('enviar_correo.php', {
+          method: 'POST',
+          body: formData
+        });
+        
+        const result = await response.json();
+        
+        statusDiv.style.display = 'block';
+        if (response.ok) {
+          statusDiv.style.color = '#15803d'; // Green
+          statusDiv.textContent = result.message;
+          form.reset();
+          // Reset captcha
+          num1 = Math.floor(Math.random() * 10) + 1;
+          num2 = Math.floor(Math.random() * 10) + 1;
+          expectedSum = num1 + num2;
+          questionSpan.textContent = `${num1} + ${num2}`;
+        } else {
+          statusDiv.style.color = '#b91c1c'; // Red
+          statusDiv.textContent = result.message;
+        }
+      } catch (error) {
+        statusDiv.style.display = 'block';
+        statusDiv.style.color = '#b91c1c';
+        statusDiv.textContent = 'Ocurrió un error al enviar el formulario. Intenta nuevamente.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = `
+          Enviar Mensaje
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+        `;
+      }
+    });
+  }
+}
+
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   ComponentLoader.loadAll();
   AccordionController.init();
   StackedImagesController.init();
   TabsController.init();
+  ContactFormController.init();
 });
