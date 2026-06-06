@@ -543,6 +543,32 @@
   font-weight: var(--fw-medium);
 }
 
+.team-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-accent);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  margin-top: var(--space-md);
+  transition: all var(--transition-fast);
+}
+
+.team-card__link:hover {
+  gap: var(--space-sm);
+  color: var(--color-accent-hover, #a65118); /* Fallback in case accent-hover is not defined */
+}
+
+.team-card__link-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-fast);
+}
+
+.team-card__link:hover .team-card__link-icon {
+  transform: translateX(4px);
+}
+
 @media (min-width: 768px) {
   .team__grid { grid-template-columns: repeat(2, 1fr); }
   .team-card__photo {
