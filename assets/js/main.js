@@ -256,6 +256,54 @@ class ContactFormController {
   }
 }
 
+class LightboxController {
+  static init() {
+    const images = document.querySelectorAll('.metod-tab-img');
+    if (!images.length) return;
+
+    // Create lightbox HTML
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox-overlay';
+    lightbox.innerHTML = `
+      <div class="lightbox-content">
+        <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+        <img class="lightbox-img" src="" alt="Ampliada">
+        <div class="lightbox-hint">Haz clic derecho en la imagen para guardarla / descargarla.</div>
+      </div>
+    `;
+    document.body.appendChild(lightbox);
+
+    const lightboxImg = lightbox.querySelector('.lightbox-img');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('is-active');
+      setTimeout(() => { lightboxImg.src = ''; }, 300); // clear after fade out
+    };
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox || e.target === closeBtn) {
+        closeLightbox();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('is-active')) {
+        closeLightbox();
+      }
+    });
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('is-active');
+      });
+    });
+  }
+}
+
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   ComponentLoader.loadAll();
@@ -263,4 +311,5 @@ document.addEventListener('DOMContentLoaded', () => {
   StackedImagesController.init();
   TabsController.init();
   ContactFormController.init();
+  LightboxController.init();
 });

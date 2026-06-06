@@ -743,6 +743,7 @@
   box-shadow: var(--shadow-lg);
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
   opacity: 0;
+  cursor: zoom-in;
 }
 
 .metod-tab-panel.is-active .metod-tab-img {
@@ -750,7 +751,7 @@
 }
 
 .metod-tab-panel:hover .metod-tab-img {
-  transform: translateY(-4px) scale(1.02) !important;
+  transform: translateY(-4px) scale(1.05) !important;
   box-shadow: var(--shadow-xl);
 }
 
@@ -1146,6 +1147,9 @@
   border-left: 12px solid var(--color-primary-light);
   padding: var(--space-2xl);
   box-shadow: var(--shadow-md);
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
 }
 
 .purpose-card-title {
@@ -1518,3 +1522,73 @@
 .team-v2-tag--green { background: #dcfce7; color: var(--color-success); border: 1px solid var(--color-success); }
 .team-v2-tag--orange { background: #fef3c7; color: var(--color-warning); border: 1px solid var(--color-warning); }
 .team-v2-tag--purple { background: #f3e8ff; color: #9333ea; border: 1px solid #9333ea; }
+
+/* ── Lightbox Overlay ── */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.lightbox-overlay.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 85vh;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  transform: scale(0.95);
+  transition: transform var(--transition-base);
+}
+
+.lightbox-overlay.is-active .lightbox-img {
+  transform: scale(1);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: -10px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  line-height: 1;
+  transition: color var(--transition-fast);
+}
+
+.lightbox-close:hover {
+  color: var(--color-accent);
+}
+
+.lightbox-hint {
+  color: rgba(255,255,255,0.8);
+  font-size: var(--fs-sm);
+  margin-top: var(--space-md);
+  text-align: center;
+}
